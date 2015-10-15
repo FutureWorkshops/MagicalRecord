@@ -53,6 +53,10 @@ static NSString * const kMagicalRecordNSManagedObjectContextWorkingName = @"kNSM
     return [NSString stringWithString:familyTree];
 }
 
++ (BOOL)MR_isDefaultContext:(NSManagedObjectContext *)otherContext {
+    return otherContext == defaultManagedObjectContext_;
+}
+
 + (NSManagedObjectContext *) MR_defaultContext
 {
 	@synchronized (self)

@@ -25,6 +25,8 @@ extern NSString * const kMagicalRecordDidMergeChangesFromiCloudNotification;
 - (NSString *) MR_description;
 - (NSString *) MR_parentChain;
 
++ (BOOL)MR_isDefaultContext:(NSManagedObjectContext *)otherContext;
+
 @property (nonatomic, copy, setter = MR_setWorkingName:) NSString *MR_workingName;
 
 @end

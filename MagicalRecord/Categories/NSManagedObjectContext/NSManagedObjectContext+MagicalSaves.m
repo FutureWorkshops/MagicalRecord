@@ -80,7 +80,7 @@
                 }
             } else {
                 // If we're the default context, save to disk too (the user expects it to persist)
-                BOOL isDefaultContext = (self == [[self class] MR_defaultContext]);
+                BOOL isDefaultContext = [[self class] MR_isDefaultContext:self];
                 BOOL shouldSaveParentContext = ((YES == saveParentContexts) || isDefaultContext);
                 
                 if (shouldSaveParentContext && [self parentContext]) {
